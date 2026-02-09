@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ASCII Lab | Converter + Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <header class="site-header">
+      <div class="container">
+        <nav class="nav">
+          <div class="brand">ASCII Lab</div>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navLinks">
+            <span class="nav-toggle-text" data-i18n="nav_menu">Menu</span>
+            <span class="nav-toggle-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+          <div class="nav-menu" id="navLinks">
+            <div class="nav-links">
+              <a class="active" href="index.html" data-i18n="nav_home">Home</a>
+              <a href="convert.html" data-i18n="nav_convert">Converter</a>
+              <a href="table.html" data-i18n="nav_table">ASCII Table</a>
+            </div>
+            <div class="nav-actions">
+              <button class="chip theme-chip" id="themeToggle" data-action="toggleTheme" data-i18n="theme_dark">Dark mode</button>
+              <div class="lang-switch">
+                <button class="chip" data-lang="bn">বাংলা</button>
+                <button class="chip" data-lang="en">EN</button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div>
+          <p class="eyebrow" data-i18n="hero_tag">ASCII Utility Studio</p>
+          <h1 data-i18n="hero_title">ASCII table, conversions, and form-to-form transforms.</h1>
+          <p class="lead" data-i18n="hero_desc">
+            Fast text ↔ ASCII, binary, hex, and octal in a bold, clean interface.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="convert.html" data-i18n="hero_cta_primary">কনভার্ট করুন</a>
+            <a class="btn ghost" href="table.html" data-i18n="hero_cta_secondary">ASCII টেবিল দেখুন</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="card-title" data-i18n="hero_card_title">Quick Example</div>
+          <div class="code-block">
+            <div>Text: <span class="accent">Hello</span></div>
+            <div>ASCII: <span class="accent">72, 101, 108, 108, 111</span></div>
+            <div>Binary: <span class="accent">01001000 01100101 01101100 01101100 01101111</span></div>
+            <div>Hex: <span class="accent">48 65 6C 6C 6F</span></div>
+            <div>Octal: <span class="accent">110 145 154 154 157</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid-3">
+        <div class="feature">
+          <h3 data-i18n="feat_one_title">Text → ASCII</h3>
+          <p data-i18n="feat_one_desc">Get decimal ASCII codes for every character.</p>
+        </div>
+        <div class="feature">
+          <h3 data-i18n="feat_two_title">ASCII → Text</h3>
+          <p data-i18n="feat_two_desc">Turn comma or space separated numbers into text.</p>
+        </div>
+        <div class="feature">
+          <h3 data-i18n="feat_three_title">Binary / Hex / Octal</h3>
+          <p data-i18n="feat_three_desc">Convert 8-bit binary plus hex and octal in both directions.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <p data-i18n="footer_text">Made for ASCII learning and conversions.</p>
+          <p class="footer-copy">© 2026 <a href="https://ahsanur-portfolio.netlify.app" target="_blank" rel="noopener">Md. Ahsanur Rahaman</a>. <span data-i18n="footer_copy">All rights reserved.</span></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

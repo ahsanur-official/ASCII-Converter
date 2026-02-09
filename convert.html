@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ASCII Lab | Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <header class="site-header">
+      <div class="container">
+        <nav class="nav">
+          <div class="brand">ASCII Lab</div>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navLinks">
+            <span class="nav-toggle-text" data-i18n="nav_menu">Menu</span>
+            <span class="nav-toggle-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+          <div class="nav-menu" id="navLinks">
+            <div class="nav-links">
+              <a href="index.html" data-i18n="nav_home">Home</a>
+              <a class="active" href="convert.html" data-i18n="nav_convert">Converter</a>
+              <a href="table.html" data-i18n="nav_table">ASCII Table</a>
+            </div>
+            <div class="nav-actions">
+              <button class="chip theme-chip" id="themeToggle" data-action="toggleTheme" data-i18n="theme_dark">Dark mode</button>
+              <div class="lang-switch">
+                <button class="chip" data-lang="bn">বাংলা</button>
+                <button class="chip" data-lang="en">EN</button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="page-hero">
+        <h1 data-i18n="convert_title">ASCII Converter</h1>
+        <p class="lead" data-i18n="convert_desc">
+          Convert text to ASCII, binary, hex, or octal and back again.
+        </p>
+      </section>
+
+      <section class="panel smart-panel">
+        <div class="panel-header">
+          <div>
+            <h2 class="section-title" data-i18n="smart_title">Smart Converter</h2>
+            <p class="muted" data-i18n="smart_desc">Pick formats, swap, and convert instantly.</p>
+          </div>
+          <div class="panel-actions">
+            <button class="chip" data-action="swapSmart" data-i18n="btn_swap">Swap</button>
+            <button class="chip" data-action="copy" data-target="smartOutput" data-i18n="btn_copy">Copy</button>
+            <button class="chip" data-action="download" data-target="smartOutput" data-filename="smart-output.txt" data-i18n="btn_download">Download</button>
+          </div>
+        </div>
+
+        <div class="smart-controls">
+          <div>
+            <label class="field-label" for="smartFrom" data-i18n="label_from">From</label>
+            <select id="smartFrom" data-action="smartChange">
+              <option value="text" data-i18n="opt_text">Text</option>
+              <option value="ascii" data-i18n="opt_ascii">ASCII (dec)</option>
+              <option value="binary" data-i18n="opt_binary">Binary</option>
+              <option value="hex" data-i18n="opt_hex">Hex</option>
+              <option value="octal" data-i18n="opt_octal">Octal</option>
+            </select>
+          </div>
+          <button class="swap-btn" type="button" data-action="swapSmart">&lt;-&gt;</button>
+          <div>
+            <label class="field-label" for="smartTo" data-i18n="label_to">To</label>
+            <select id="smartTo" data-action="smartChange">
+              <option value="text" data-i18n="opt_text">Text</option>
+              <option value="ascii" data-i18n="opt_ascii">ASCII (dec)</option>
+              <option value="binary" data-i18n="opt_binary">Binary</option>
+              <option value="hex" data-i18n="opt_hex">Hex</option>
+              <option value="octal" data-i18n="opt_octal">Octal</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="smart-inputs">
+          <textarea id="smartInput" rows="4" data-i18n-placeholder="ph_smart_input" placeholder="Type or paste here..."></textarea>
+          <button class="btn full" data-action="smartConvert" data-i18n="btn_convert">Convert</button>
+          <textarea id="smartOutput" rows="4" readonly data-i18n-placeholder="ph_smart_output" placeholder="Converted output..."></textarea>
+        </div>
+      </section>
+
+      <section class="note-card">
+        <h3 data-i18n="note_title">Input Tips</h3>
+        <p data-i18n="note_desc">
+          ASCII/hex/octal ইনপুটে comma, space, বা new line দিয়ে সংখ্যা আলাদা করতে পারবেন। Binary ইনপুটে ৮-বিট ব্লক (যেমন 01000001) ব্যবহার করুন।
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <p data-i18n="footer_text">Made for ASCII learning and conversions.</p>
+          <p class="footer-copy">© 2026 <a href="https://ahsanur-portfolio.netlify.app" target="_blank" rel="noopener">Md. Ahsanur Rahaman</a>. <span data-i18n="footer_copy">All rights reserved.</span></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
